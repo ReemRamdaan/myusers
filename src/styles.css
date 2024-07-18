@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root
+{
+--main-Color:#20c997;
+}
+body
+{
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+i
+{
+    color:white;
+    cursor: pointer;
+}
+h1
+{
+    position: relative;
+}
+h1::after
+{
+    content: "";
+    background-color: var(--main-Color);
+    position: absolute;
+    top: 110%;
+    left:45%;
+    width: 10%;
+    height: 1px;
+}
+.circle
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle:hover 
+{
+    background-color: var(--main-Color);
+}
+.circle:hover i
+{
+    color: black;
+}
+.home-active
+{
+    background-color: var(--main-Color);
+    color: black !important;
+}
+.user-header
+{
+    color: white;
+}
+.user-header:hover
+{
+    color: var(--main-Color);
+}
+
+.logout
+{
+    padding: 7px 10px;
+    background-color: transparent;
+    border:solid 1px var(--main-Color);
+    color: var(--main-Color);
+    border-radius: 5px;
+}
+.logout:hover{
+    background-color:var(--main-Color);
+    color: black;
+}
+.home-header
+{
+    color: var(--main-Color);
+}
+input
+{
+    caret-color: var(--main-Color);
+    color: var(--main-Color) !important;
+}
+.toggle-btn
+{
+    background-color: var(--main-Color);
+}

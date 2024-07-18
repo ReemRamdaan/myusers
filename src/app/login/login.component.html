@@ -1,0 +1,21 @@
+<div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="w-50 p-5 shadow">
+       <form (ngSubmit)="handleLogin(loginForm)" [formGroup]="loginForm">
+        <h2 class="my-3 home-header">Login Now:</h2>
+        <label  for="name" class="mt-3 home-header">Name :</label>
+        <input id="name" formControlName="name" type="text" class="form-control ">
+        <div *ngIf="loginForm.get('name')?.errors && loginForm.get('name')?.touched" class="alert alert-danger text-center my-2">
+            <p *ngIf="loginForm.get('name')?.getError('required')" class="m-0">Name Is Required</p>
+            <p *ngIf="loginForm.get('name')?.getError('minLength')" class="m-0">Name Minimum Length Is 3</p>
+            <p *ngIf="loginForm.get('name')?.getError('maxLength')" class="m-0">Name Maximum Length Is 15</p>
+        </div>
+        <label for="password" class="mt-3 home-header">Password :</label>
+        <input id="password" formControlName="password" type="text" class="form-control">
+        <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="alert alert-danger text-center my-2">
+            <p *ngIf="loginForm.get('password')?.getError('required')" class="m-0">Password Is Required</p>
+            <p *ngIf="loginForm.get('password')?.getError('pattern')" class="m-0">Password Has To Match This Pattern Zzzz124</p>
+        </div>
+        <button class="btn logout d-block ms-auto mt-3">Login</button>
+       </form>
+    </div>
+</div>

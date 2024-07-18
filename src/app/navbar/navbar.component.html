@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg bg-dark p-2">
+    <div class="container m-auto d-flex justify-content-between">
+      <a class="navbar-brand user-header" href="#" >My Users</a>
+      <button *ngIf="isLogin" class="navbar-toggler toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon toggle-btn "></span>
+      </button>
+      <div class="collapse navbar-collapse  w-100" id="navbarSupportedContent">
+        <ul *ngIf="isLogin" class="navbar-nav  mb-2 mb-lg-0 w-75 m-auto d-flex align-items-center justify-content-between">
+        <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="home" routerLinkActive="home-active rounded">Home</a>
+          </li>
+        <li class="nav-item circle">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+          <li class="nav-item circle">
+            <i class="fa-brands fa-square-facebook "></i>
+          </li>
+          <li class="nav-item circle">
+            <i class="fa-brands fa-twitter "></i>
+          </li>
+          <li class="nav-item circle">
+            <i class="fa-brands fa-instagram "></i>
+          </li>
+          <li class="nav-item circle">
+            <i class="fa-brands fa-github "></i>
+          </li>
+          <li class="nav-item circle">
+            <i class="fa-brands fa-spotify "></i>
+          </li>
+          <li class="nav-item circle">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </li>
+        </ul>
+        
+      </div>
+      <button *ngIf="isLogin" (click)="logOut()" class="logout ms-2">LogOut</button>
+    </div>
+  </nav>

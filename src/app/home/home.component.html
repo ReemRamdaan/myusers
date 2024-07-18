@@ -1,0 +1,33 @@
+<ngx-spinner  bdColor = "black" size = "large" color = "#20c997" type = "ball-beat" [fullScreen] = "true">
+    </ngx-spinner>
+<div class="container p-3 bg-light">
+    <h1 class="text-center home-header">My Users</h1>
+    <div class="row w-75 m-auto">
+     <div class="col-lg-6 col-md-12">
+        <input [(ngModel)]="searchTerm" type="text" class="form-control my-3 m-auto " placeholder="Search By Name..." id="searchInput">
+     </div>
+       <div class="col-lg-6 col-md-12">
+        <input [(ngModel)]="searchByUserName" type="text" class="form-control my-3 m-auto" placeholder="Search By User Name..." id="searchByUserName">
+       </div>
+    </div>
+    <div class="row p-3">
+        <div *ngFor="let user of myUsers|search:searchTerm |searchbyuserName:searchByUserName|paginate: { id: 'some_id',itemsPerPage: 3,currentPage:p,totalItems: 10 }" class="w-75 m-auto my-2 rounded shadow p-2">
+              <a [routerLink]='["/userdetails",user?.id]'>
+               <div class="d-flex justify-content-between p-2 row">
+                <div class="p-1 col-lg-8 col-md-6 col-sm-12">
+                    <h3 class="home-header">{{user.name}}</h3>
+                    <h3 class="text-muted">{{user.username}}</h3>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 p-1 d-flex flex-column justify-content-around">  
+                    <h6 class="m-0 p-2">Website : <span class="home-header"> {{user.website}}</span></h6>
+                    <h6 class="m-0 p-2">Phone : <span class="home-header">{{user.phone}}</span></h6>
+                </div>
+               </div>
+              </a>
+            </div>
+    </div>
+   <div class="d-flex w-75 m-auto">
+    <pagination-controls class="ms-auto" id="some_id" (pageChange)="( p = $event)" previousLabel="Prev"  nextLabel="Next">
+    </pagination-controls>
+   </div>
+</div>

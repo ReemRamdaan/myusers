@@ -1,0 +1,82 @@
+<ngx-spinner  bdColor = "black" size = "large" color = "#20c997" type = "ball-beat" [fullScreen] = "true">
+</ngx-spinner>
+<div class="container d-flex justify-content-center vh-100 align-items-center p-3 ">
+    <div class="w-100 rounded p-5 bg-light">
+        <h1 class="text-center home-header mt-lg-0 mt-md-0 mt-5">{{userDetails?.name}}</h1>
+        <h2 class="text-center text-muted">{{userDetails?.username}}</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 p-3">
+              <div class="inner d-flex flex-column justify-content-center bg-white p-3 rounded shadow">
+                <h3 class="home-header">Contact</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><h5>Phone</h5></td>
+                            <td>:</td>
+                            <td><h5 class="home-header">{{userDetails?.phone}}.</h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Email</h5></td>
+                            <td>: </td>
+                            <td><h5 class="home-header">{{userDetails?.email}}.</h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Site</h5></td>
+                            <td>: </td>
+                            <td><h5 class="home-header">{{userDetails?.website}}.</h5></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-3 ">
+              <div class="inner d-flex flex-column justify-content-center bg-white p-3 rounded shadow">
+                <h3 class="home-header">Address</h3>
+                <table>
+                    <tbody>
+                        <tr class="d-flex align-items-center">
+                            <td><h5 class=" m-1">City :</h5></td>
+                            
+                            <td><h5 class=" m-1 home-header">{{userDetails?.address.city}}.</h5></td>
+                        </tr>
+                        <tr class="d-flex align-items-center">
+                            <td><h5 class=" m-1">Suite :</h5></td>
+                            
+                            <td><h5 class=" m-1 home-header">{{userDetails?.address.suite}}.</h5></td>
+                        </tr>
+                        <tr class="d-flex align-items-center">
+                            <td><h5 class=" m-1">Street :</h5></td>
+                            
+                            <td><h5 class=" m-1 home-header">{{userDetails?.address.street}}.</h5></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-3 ">
+              <div class="inner d-flex flex-column justify-content-center bg-white p-3 rounded shadow">
+                <h3 class="home-header">Company</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><h5 class=" pox-size">Name</h5></td>
+                            <td>:</td>
+                            <td><h5 class="home-header">{{userDetails?.company.name}}.</h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Phrase</h5></td>
+                            <td>:</td>
+                            <td><h5 class="home-header">{{userDetails?.company.catchPhrase}}.</h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>BS</h5></td>
+                            <td>:</td>
+                            <td><h5 class="home-header">{{userDetails?.company.bs}}.</h5></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
